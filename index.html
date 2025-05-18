@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pour Olorun-Foumilayo Jeannette ADEOLA</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #cce7ff, #e6f2ff);
+      color: #003366;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    h1 {
+      font-size: 2.8em;
+      margin-bottom: 20px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .phrase {
+      font-size: 1.4em;
+      max-width: 600px;
+      margin: 0 auto 40px;
+      color: #003366cc;
+      animation: fadeIn 3s ease-in-out;
+      line-height: 1.5;
+    }
+
+    .gallery {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 40px;
+    }
+
+    .gallery img {
+      width: 250px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 51, 102, 0.2);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .button-container {
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 14px 30px;
+      font-size: 1.2em;
+      background-color: #007acc;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 122, 204, 0.5);
+    }
+
+    button:hover {
+      background-color: #005999;
+    }
+
+    .surprise {
+      margin-top: 25px;
+      font-size: 1.3em;
+      color: #002244;
+      min-height: 40px;
+      animation: fadeIn 1s ease;
+    }
+
+    audio {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Pour Olorun-Foumilayo Jeannette ADEOLA 💙</h1>
+
+  <p class="phrase">
+    Si mon cœur était un ciel, tu serais la plus belle étoile.<br>
+    Tu illumines ma vie de ta douceur et de ta lumière.
+  </p>
+
+  
+  <div class="gallery">
+  <div class="image-card">
+    <img src="you.jpg" alt="Amour 1" />
+    <p>You</p>
+  </div>
+
+  <div class="image-card">
+   <img src="us.jpeg" alt="Amour 3" />
+    <p>Us</p>
+  </div>
+
+  <div class="image-card">
+    <img src="me.jpg" alt="Amour 2" />
+    <p>Me</p>
+  </div>
+</div>
+
+
+  <div class="button-container">
+    <button onclick="showSurprise()">Clique ici 💌</button>
+    <p class="surprise" id="surpriseText"></p>
+  </div>
+
+  <audio autoplay loop>
+    <source src="https://cdn.pixabay.com/download/audio/2023/03/20/audio_15a56e8f0e.mp3?filename=romantic-story-144302.mp3" type="audio/mpeg" />
+    Votre navigateur ne supporte pas l'audio.
+  </audio>
+
+  <script>
+    const phrases = [
+  "Ton sourire me donne envie de croire en la beauté de chaque jour.",
+  "Depuis que je t’ai rencontrée, mon monde a changé de couleur.",
+  "Je ne cherche plus le bonheur, je l’ai trouvé en toi.",
+  "À chaque battement de cœur, c’est ton prénom qui résonne en moi.",
+  "Tu es ce que j’ai de plus doux, de plus vrai, de plus beau.",
+  "Ton regard est la lumière qui éclaire mes jours sombres.",
+  "Être près de toi, c’est comme retrouver la paix dans un monde agité.",
+  "Chaque moment passé avec toi est un trésor que je garde précieusement.",
+  "Tu es la mélodie douce qui berce mon âme.",
+  "Avec toi, chaque jour est une nouvelle aventure remplie d’amour.",
+  "Ta présence transforme mes rêves en réalité.",
+  "Je t’aime plus que les mots ne peuvent jamais l’exprimer."
+];
+
+
+    function showSurprise() {
+      const surprise = document.getElementById("surpriseText");
+      const randomIndex = Math.floor(Math.random() * phrases.length);
+      surprise.textContent = phrases[randomIndex];
+      surprise.style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
