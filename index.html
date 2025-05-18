@@ -84,12 +84,46 @@
     audio {
       display: none;
     }
+    #gtm {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2.5em;
+  font-weight: bold;
+  text-align: center;
+  color: #ff3366;
+  animation: flash 3s infinite alternate;
+}
+
+@keyframes flash {
+  0% {
+    color: #ff3366;
+    font-size: 2.5em;
+  }
+  25% {
+    color: #3366ff;
+    font-size: 2.8em;
+  }
+  50% {
+    color: #33cc66;
+    font-size: 2.3em;
+  }
+  75% {
+    color: #cc33ff;
+    font-size: 3em;
+  }
+  100% {
+    color: #ffcc00;
+    font-size: 2.5em;
+  }
+}
   </style>
 </head>
 <body>
 
   <h1>Pour Olorun-Foumilayo Jeannette ADEOLA 💙</h1>
-
+<h1 id="gtm">Jeanette, je t'aime</h1>
   <p class="phrase">
     Si mon cœur était un ciel, tu serais la plus belle étoile.<br>
     Tu illumines ma vie de ta douceur et de ta lumière.
