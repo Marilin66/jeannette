@@ -1,36 +1,30 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HQLG5WDMSL"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-HQLG5WDMSL');
-</script>
   <meta charset="UTF-8" />
   <title>Pour Olorun-Foumilayo Jeannette ADEOLA</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
       background: linear-gradient(to bottom right, #cce7ff, #e6f2ff);
       color: #003366;
       text-align: center;
       padding: 50px 20px;
+      overflow-x: hidden;
+      position: relative;
     }
 
     h1 {
       font-size: 2.8em;
       margin-bottom: 20px;
       animation: fadeIn 2s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
     }
 
     .phrase {
@@ -62,6 +56,11 @@
       transform: scale(1.05);
     }
 
+    .gallery .image-card p {
+      margin-top: 8px;
+      font-weight: bold;
+    }
+
     .button-container {
       margin-bottom: 20px;
     }
@@ -90,116 +89,160 @@
       animation: fadeIn 1s ease;
     }
 
-    audio {
-      display: none;
+    #typewriter {
+      font-size: 2.2em;
+      font-weight: bold;
+      color: #ff3366;
+      margin-bottom: 30px;
+      animation: typing 3s steps(40, end), blink 0.75s step-end infinite;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid #ff3366;
+      width: 0;
     }
-    #gtm {
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 2.5em;
-  font-weight: bold;
-  text-align: center;
-  color: #ff3366;
-  animation: flash 3s infinite alternate;
-}
 
-@keyframes flash {
-  0% {
-    color: #ff3366;
-    font-size: 2.5em;
-  }
-  25% {
-    color: #3366ff;
-    font-size: 2.8em;
-  }
-  50% {
-    color: #33cc66;
-    font-size: 2.3em;
-  }
-  75% {
-    color: #cc33ff;
-    font-size: 3em;
-  }
-  100% {
-    color: #ffcc00;
-    font-size: 2.5em;
-  }
-}
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .heart {
+      position: fixed;
+      bottom: -20px;
+      width: 20px;
+      height: 20px;
+      background: red;
+      transform: rotate(45deg);
+      animation: floatingHearts 10s linear infinite;
+      opacity: 0.8;
+      border-radius: 50%;
+    }
+
+    @keyframes floatingHearts {
+      0% {
+        transform: translateY(0) rotate(45deg) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-110vh) rotate(45deg) scale(0.5);
+        opacity: 0;
+      }
+    }
+
+    .audio-control {
+      position: fixed;
+      top: 15px;
+      right: 20px;
+    }
+
+    .audio-control button {
+      background: transparent;
+      border: none;
+      font-size: 30px;
+      color: #007acc;
+      cursor: pointer;
+    }
   </style>
 </head>
 <body>
 
   <h1>Pour Olorun-Foumilayo Jeannette ADEOLA 💙</h1>
-<h1 id="gtm">Jeannette, je t'aime</h1>
+  <div id="typewriter">Jeannette, je t’aime infiniment 💖</div>
+
   <p class="phrase">
     Si mon cœur était un ciel, tu serais la plus belle étoile.<br>
     Tu illumines ma vie de ta douceur et de ta lumière.
   </p>
 
-  
   <div class="gallery">
-  <div class="image-card">
-    <img src="you.jpg" alt="Amour 1" />
-    <p>You</p>
+    <div class="image-card">
+      <img src="you.jpg" alt="Amour 1" />
+      <p>You</p>
+    </div>
+    <div class="image-card">
+      <img src="us.jpeg" alt="Amour 3" />
+      <p>Us</p>
+    </div>
+    <div class="image-card">
+      <img src="me.jpg" alt="Amour 2" />
+      <p>Me</p>
+    </div>
   </div>
-
-  <div class="image-card">
-   <img src="us.jpeg" alt="Amour 3" />
-    <p>Us</p>
-  </div>
-
-  <div class="image-card">
-    <img src="me.jpg" alt="Amour 2" />
-    <p>Me</p>
-  </div>
-</div>
-
 
   <div class="button-container">
     <button onclick="showSurprise()">Clique ici 💌</button>
     <p class="surprise" id="surpriseText"></p>
   </div>
 
-  <audio autoplay loop>
+  <div class="audio-control">
+    <button onclick="toggleMusic()">
+      <i id="music-icon" class="fas fa-pause-circle"></i>
+    </button>
+  </div>
+
+  <audio id="bg-music" autoplay loop>
     <source src="https://cdn.pixabay.com/download/audio/2023/03/20/audio_15a56e8f0e.mp3?filename=romantic-story-144302.mp3" type="audio/mpeg" />
     Votre navigateur ne supporte pas l'audio.
   </audio>
 
+  <!-- Cœurs animés -->
+  <div class="heart" style="left: 10%; animation-delay: 0s;"></div>
+  <div class="heart" style="left: 25%; animation-delay: 2s;"></div>
+  <div class="heart" style="left: 40%; animation-delay: 4s;"></div>
+  <div class="heart" style="left: 60%; animation-delay: 1s;"></div>
+  <div class="heart" style="left: 80%; animation-delay: 3s;"></div>
+
   <script>
     const phrases = [
-  "Ton sourire me donne envie de croire en la beauté de chaque jour.",
-  "Depuis que je t’ai rencontrée, mon monde a changé de couleur.",
-  "Je ne cherche plus le bonheur, je l’ai trouvé en toi.",
-  "À chaque battement de cœur, c’est ton prénom qui résonne en moi.",
-  "Tu es ce que j’ai de plus doux, de plus vrai, de plus beau.",
-  "Ton regard est la lumière qui éclaire mes jours sombres.",
-  "Être près de toi, c’est comme retrouver la paix dans un monde agité.",
-  "Chaque moment passé avec toi est un trésor que je garde précieusement.",
-  "Tu es la mélodie douce qui berce mon âme.",
-  "Avec toi, chaque jour est une nouvelle aventure remplie d’amour.",
-  "Ta présence transforme mes rêves en réalité.",
-  "Je t’aime plus que les mots ne peuvent jamais l’exprimer.",
-  // Ajout de nouvelles phrases :
-  "Quand je pense à toi, un sourire naît sans raison.",
-  "Ton absence est un silence que mon cœur ne sait pas interpréter.",
-  "Je t'aime dans chaque battement de mon cœur et dans chaque souffle que je prends.",
-  "Ton amour est mon plus grand poème, écrit sans mots mais ressenti à chaque instant.",
-  "Tu es la seule personne qui peut faire battre mon cœur juste avec un regard.",
-  "Aimer, c’est te regarder et oublier le reste du monde.",
-  "Si j’avais une rose pour chaque pensée pour toi, je pourrais marcher dans un jardin infini.",
-  "Ton amour est la lumière qui guide mes pas dans l’obscurité.",
-  "Même dans mes rêves les plus fous, je n’imaginais pas quelqu’un comme toi.",
-  "Tu es l’évidence au milieu de mes doutes, la tendresse au milieu du chaos."
-];
-
+      "Ton sourire me donne envie de croire en la beauté de chaque jour.",
+      "Depuis que je t’ai rencontrée, mon monde a changé de couleur.",
+      "Je ne cherche plus le bonheur, je l’ai trouvé en toi.",
+      "À chaque battement de cœur, c’est ton prénom qui résonne en moi.",
+      "Tu es ce que j’ai de plus doux, de plus vrai, de plus beau.",
+      "Ton regard est la lumière qui éclaire mes jours sombres.",
+      "Être près de toi, c’est comme retrouver la paix dans un monde agité.",
+      "Chaque moment passé avec toi est un trésor que je garde précieusement.",
+      "Tu es la mélodie douce qui berce mon âme.",
+      "Avec toi, chaque jour est une nouvelle aventure remplie d’amour.",
+      "Ta présence transforme mes rêves en réalité.",
+      "Je t’aime plus que les mots ne peuvent jamais l’exprimer.",
+      "Quand je pense à toi, un sourire naît sans raison.",
+      "Ton absence est un silence que mon cœur ne sait pas interpréter.",
+      "Je t'aime dans chaque battement de mon cœur et dans chaque souffle que je prends.",
+      "Ton amour est mon plus grand poème, écrit sans mots mais ressenti à chaque instant.",
+      "Tu es la seule personne qui peut faire battre mon cœur juste avec un regard.",
+      "Aimer, c’est te regarder et oublier le reste du monde.",
+      "Si j’avais une rose pour chaque pensée pour toi, je pourrais marcher dans un jardin infini.",
+      "Ton amour est la lumière qui guide mes pas dans l’obscurité.",
+      "Même dans mes rêves les plus fous, je n’imaginais pas quelqu’un comme toi.",
+      "Tu es l’évidence au milieu de mes doutes, la tendresse au milieu du chaos."
+    ];
 
     function showSurprise() {
       const surprise = document.getElementById("surpriseText");
       const randomIndex = Math.floor(Math.random() * phrases.length);
       surprise.textContent = phrases[randomIndex];
-      surprise.style.display = "block";
+    }
+
+    function toggleMusic() {
+      const music = document.getElementById("bg-music");
+      const icon = document.getElementById("music-icon");
+      if (music.paused) {
+        music.play();
+        icon.classList.replace("fa-play-circle", "fa-pause-circle");
+      } else {
+        music.pause();
+        icon.classList.replace("fa-pause-circle", "fa-play-circle");
+      }
     }
   </script>
 
