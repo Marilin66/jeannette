@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <title>Pour Olorun-Foumilayo Jeannette ADEOLA</title>
+  <title>Le Jardin Secret de Jeannette 🌹</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
     * {
@@ -13,106 +13,37 @@
     }
 
     body {
-      background: linear-gradient(to bottom right, #cce7ff, #e6f2ff);
-      color: #003366;
+      background: linear-gradient(to right, #ffe6f0, #e6f7ff);
+      color: #333;
       text-align: center;
       padding: 50px 20px;
-      overflow-x: hidden;
       position: relative;
+      overflow-x: hidden;
     }
 
     h1 {
-      font-size: 2.8em;
-      margin-bottom: 20px;
-      animation: fadeIn 2s ease-in-out;
-    }
-
-    .phrase {
-      font-size: 1.4em;
-      max-width: 600px;
-      margin: 0 auto 40px;
-      color: #003366cc;
-      animation: fadeIn 3s ease-in-out;
-      line-height: 1.5;
-    }
-
-    .gallery {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin-bottom: 40px;
-    }
-
-    .gallery img {
-      width: 250px;
-      border-radius: 15px;
-      box-shadow: 0 4px 10px rgba(0, 51, 102, 0.2);
-      transition: transform 0.3s ease;
-      cursor: pointer;
-    }
-
-    .gallery img:hover {
-      transform: scale(1.05);
-    }
-
-    .gallery .image-card p {
-      margin-top: 8px;
-      font-weight: bold;
-    }
-
-    .button-container {
-      margin-bottom: 20px;
-    }
-
-    button {
-      padding: 14px 30px;
-      font-size: 1.2em;
-      background-color: #007acc;
-      color: white;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      box-shadow: 0 4px 8px rgba(0, 122, 204, 0.5);
-    }
-
-    button:hover {
-      background-color: #005999;
-    }
-
-    .surprise {
-      margin-top: 25px;
-      font-size: 1.3em;
-      color: #002244;
-      min-height: 40px;
-      animation: fadeIn 1s ease;
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      color: #cc3366;
     }
 
     #typewriter {
-      font-size: 2.2em;
-      font-weight: bold;
+      font-size: 1.8em;
       color: #ff3366;
       margin-bottom: 30px;
-      animation: typing 3s steps(40, end), blink 0.75s step-end infinite;
+      border-right: 3px solid;
       white-space: nowrap;
       overflow: hidden;
-      border-right: 3px solid #ff3366;
-      width: 0;
+      animation: typing 5s steps(40, end), blink 0.75s step-end infinite;
     }
 
     @keyframes typing {
-      from { width: 0; }
-      to { width: 100%; }
+      from { width: 0 }
+      to { width: 100% }
     }
 
     @keyframes blink {
       50% { border-color: transparent; }
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
     }
 
     .heart {
@@ -122,20 +53,72 @@
       height: 20px;
       background: red;
       transform: rotate(45deg);
-      animation: floatingHearts 10s linear infinite;
-      opacity: 0.8;
+      animation: floatHeart 8s linear infinite;
+      opacity: 0.6;
       border-radius: 50%;
     }
 
-    @keyframes floatingHearts {
-      0% {
-        transform: translateY(0) rotate(45deg) scale(1);
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(-110vh) rotate(45deg) scale(0.5);
-        opacity: 0;
-      }
+    @keyframes floatHeart {
+      0% { transform: translateY(0) rotate(45deg); opacity: 1; }
+      100% { transform: translateY(-120vh) rotate(45deg); opacity: 0; }
+    }
+
+    .gallery {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .gallery img {
+      width: 220px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.07);
+    }
+
+    .phrase {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+      color: #444;
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 1em;
+      background-color: #ff6699;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(255, 102, 153, 0.4);
+      margin: 10px;
+    }
+
+    button:hover {
+      background-color: #cc3366;
+    }
+
+    .surprise, .days-love {
+      font-size: 1.2em;
+      margin-top: 15px;
+      color: #660033;
+      min-height: 30px;
+    }
+
+    .secret-letter {
+      background: rgba(255,255,255,0.8);
+      border-radius: 10px;
+      padding: 20px;
+      max-width: 700px;
+      margin: 40px auto;
+      line-height: 1.6;
+      text-align: justify;
     }
 
     .audio-control {
@@ -145,56 +128,69 @@
     }
 
     .audio-control button {
-      background: transparent;
+      background: none;
       border: none;
       font-size: 30px;
-      color: #007acc;
+      color: #cc3366;
       cursor: pointer;
+    }
+
+    .gift {
+      font-size: 3em;
+      margin-top: 30px;
+      cursor: pointer;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.2); color: gold; }
+      100% { transform: scale(1); }
     }
   </style>
 </head>
 <body>
 
-  <h1>Pour Olorun-Foumilayo Jeannette ADEOLA 💙</h1>
-  <div id="typewriter">Jeannette, je t’aime infiniment 💖</div>
+  <h1>Pour Jeannette, mon Étoile 💫</h1>
+  <div id="typewriter">Depuis que tu es entrée dans ma vie, tout est devenu magique 💖</div>
 
-  <p class="phrase">
-    Si mon cœur était un ciel, tu serais la plus belle étoile.<br>
-    Tu illumines ma vie de ta douceur et de ta lumière.
-  </p>
+  <p class="phrase">"Chaque seconde passée avec toi est une éternité de bonheur." 💌</p>
 
   <div class="gallery">
-    <div class="image-card">
-      <img src="you.jpg" alt="Amour 1" />
-      <p>You</p>
-    </div>
-    <div class="image-card">
-      <img src="us.jpeg" alt="Amour 3" />
-      <p>Us</p>
-    </div>
-    <div class="image-card">
-      <img src="me.jpg" alt="Amour 2" />
-      <p>Me</p>
-    </div>
+    <div><img src="you.jpg" alt="You"><p>Toi</p></div>
+    <div><img src="us.jpeg" alt="Us"><p>Nous</p></div>
+    <div><img src="me.jpg" alt="Me"><p>Moi</p></div>
   </div>
 
-  <div class="button-container">
-    <button onclick="showSurprise()">Clique ici 💌</button>
-    <p class="surprise" id="surpriseText"></p>
+  <button onclick="showPhrase()">Une surprise romantique 💕</button>
+  <p class="surprise" id="surpriseText"></p>
+
+  <button onclick="showLoveDays()">Depuis combien de jours je t’aime ? ⏳</button>
+  <p class="days-love" id="loveDays"></p>
+
+  <div class="secret-letter">
+    <h2>📖 Lettre d’amour</h2>
+    <p>
+      Mon amour,<br><br>
+      Chaque jour, je remercie l’univers de t’avoir mise sur mon chemin. Tu es la lumière qui éclaire mes pas, le souffle qui donne vie à mes rêves. Ton regard, ta voix, ton sourire… tout en toi est une mélodie qui berce mon cœur. Je ne veux rien d’autre que toi, maintenant, demain et pour toujours.
+      <br><br>
+      Je t’aime plus que les mots ne pourront jamais le dire.
+      <br><br>
+      – Ton éternel amoureux 💘
+    </p>
   </div>
+
+  <div class="gift" onclick="alert('🎁 Ce cadeau, c’est mon cœur tout entier... pour toi, Jeannette.')">🎁</div>
 
   <div class="audio-control">
-    <button onclick="toggleMusic()">
-      <i id="music-icon" class="fas fa-pause-circle"></i>
-    </button>
+    <button onclick="toggleMusic()"><i id="music-icon" class="fas fa-pause-circle"></i></button>
   </div>
 
   <audio id="bg-music" autoplay loop>
-    <source src="https://cdn.pixabay.com/download/audio/2023/03/20/audio_15a56e8f0e.mp3?filename=romantic-story-144302.mp3" type="audio/mpeg" />
-    Votre navigateur ne supporte pas l'audio.
+    <source src="https://cdn.pixabay.com/download/audio/2023/03/20/audio_15a56e8f0e.mp3" type="audio/mpeg" />
   </audio>
 
-  <!-- Cœurs animés -->
+  <!-- Cœurs qui tombent -->
   <div class="heart" style="left: 10%; animation-delay: 0s;"></div>
   <div class="heart" style="left: 25%; animation-delay: 2s;"></div>
   <div class="heart" style="left: 40%; animation-delay: 4s;"></div>
@@ -203,34 +199,19 @@
 
   <script>
     const phrases = [
-      "Ton sourire me donne envie de croire en la beauté de chaque jour.",
-      "Depuis que je t’ai rencontrée, mon monde a changé de couleur.",
-      "Je ne cherche plus le bonheur, je l’ai trouvé en toi.",
-      "À chaque battement de cœur, c’est ton prénom qui résonne en moi.",
-      "Tu es ce que j’ai de plus doux, de plus vrai, de plus beau.",
-      "Ton regard est la lumière qui éclaire mes jours sombres.",
-      "Être près de toi, c’est comme retrouver la paix dans un monde agité.",
-      "Chaque moment passé avec toi est un trésor que je garde précieusement.",
-      "Tu es la mélodie douce qui berce mon âme.",
-      "Avec toi, chaque jour est une nouvelle aventure remplie d’amour.",
-      "Ta présence transforme mes rêves en réalité.",
-      "Je t’aime plus que les mots ne peuvent jamais l’exprimer.",
-      "Quand je pense à toi, un sourire naît sans raison.",
-      "Ton absence est un silence que mon cœur ne sait pas interpréter.",
-      "Je t'aime dans chaque battement de mon cœur et dans chaque souffle que je prends.",
-      "Ton amour est mon plus grand poème, écrit sans mots mais ressenti à chaque instant.",
-      "Tu es la seule personne qui peut faire battre mon cœur juste avec un regard.",
-      "Aimer, c’est te regarder et oublier le reste du monde.",
-      "Si j’avais une rose pour chaque pensée pour toi, je pourrais marcher dans un jardin infini.",
-      "Ton amour est la lumière qui guide mes pas dans l’obscurité.",
-      "Même dans mes rêves les plus fous, je n’imaginais pas quelqu’un comme toi.",
-      "Tu es l’évidence au milieu de mes doutes, la tendresse au milieu du chaos."
+      "Je pense à toi plus souvent que je respire.",
+      "Ton amour est mon plus beau refuge.",
+      "Tu es mon aujourd’hui et tous mes lendemains.",
+      "Rien n’est plus doux que ton prénom murmuré au creux de mon cœur.",
+      "Tu es la poésie que je ne savais pas lire avant de te connaître.",
+      "Je t’aime sans raison, sans condition, sans fin.",
+      "Toi + Moi = Pour toujours 💞",
     ];
 
-    function showSurprise() {
+    function showPhrase() {
       const surprise = document.getElementById("surpriseText");
-      const randomIndex = Math.floor(Math.random() * phrases.length);
-      surprise.textContent = phrases[randomIndex];
+      const index = Math.floor(Math.random() * phrases.length);
+      surprise.textContent = phrases[index];
     }
 
     function toggleMusic() {
@@ -244,7 +225,14 @@
         icon.classList.replace("fa-pause-circle", "fa-play-circle");
       }
     }
-  </script>
 
+    function showLoveDays() {
+      const start = new Date("2022-11-08"); // Exemple : date de début d’amour
+      const today = new Date();
+      const diffTime = Math.abs(today - start);
+      const days = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+      document.getElementById("loveDays").textContent = `Cela fait ${days} jours que je t’aime 💘`;
+    }
+  </script>
 </body>
 </html>
